@@ -59,8 +59,46 @@ img {
 
 section {
   background-color: #CFD8DC;
+  display: flex;
   float: right;
+  flex-direction: column;
   height: 700px;
+  justify-content: center;
   width: 50%
 
+}
+
+article {
+  background-color: #FFFFFF;
+  border: 1px solid #455A64;
+  margin: 0 auto 0 auto;
+  padding: 5px 10px 5px 10px;
+  width: 85%;
+}
+
+h2 {
+  color: #455A64;
+  font-weight: 800;
+}
+
+a {
+  color: #607D8B;
+  font-weight: 400;
+}
+
+button {
+  color: #455A64;
+  border: 0;
+}
+
+hr {
+  color: #CFD8DC;
+}
+
+.read {
+  float: left;
+}
+
+.delete {
+  float: right;
 }
