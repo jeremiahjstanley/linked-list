@@ -31,7 +31,7 @@ form input{
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
-  margin: 0 auto 35px auto;
+  margin: 17.5px auto 17.5px auto;
   height: 35px;
   width: 90%
 }
@@ -55,7 +55,7 @@ img {
   background-color: #FFD773;
 }
 .read {
-  background-color: green;
+  background-color: #F2F4F4;
 }
 
 section {
@@ -69,10 +69,17 @@ section {
 
 }
 
+
+p {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 3px auto 3px auto;
+}
+
 article {
   background-color: #FFFFFF;
   border: 1px solid #455A64;
-  margin: 0 auto 0 auto;
+  margin: 15px auto 0 auto;
   padding: 5px 10px 5px 10px;
   width: 85%;
 }
@@ -93,6 +100,7 @@ a {
 
 button {
   color: #455A64;
+  background-color: transparent;
   border: 0;
 }
 
@@ -100,13 +108,15 @@ hr {
   color: #CFD8DC;
 }
 
-.read {
+
+.read-button {
   float: left;
 }
 
 .delete {
   float: right;
 }
+
 
 @media only screen and (max-width: 610px) {
   form, 
@@ -120,3 +130,4 @@ hr {
   }
 
 }
+

@@ -1,7 +1,9 @@
 var button = $('.button');
+var total = 0;
+var read = 0;
+var unread = total - read;
 
 button.click(getInfo);
-
 
 
 function getInfo() {
@@ -27,6 +29,11 @@ var siteUrl = $('#website-url').val();
   " <button class='delete'>delete</button>"+
   "</article";
 
+  total +=1
+  console.log(total)
+  
+  
+  
   document.querySelector("form").reset();
 
   $('section').prepend(newCard);
@@ -46,12 +53,15 @@ var siteUrl = $('#website-url').val();
 
 function markRead() {
      $(this).parent().toggleClass("read");
+     read ++;
 }
 
 function deleteCard() {
   $(this).parent().remove();
+  total --;
 }
 
 function displayError() {
   $('.error').removeAttr('hidden');
 }
+
