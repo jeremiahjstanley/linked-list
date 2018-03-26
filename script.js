@@ -1,7 +1,6 @@
 var button = $('.button');
 var total = 0;
 var read = 0;
-var unread = total - read;
 
 button.click(getInfo);
 
@@ -22,7 +21,7 @@ var siteUrl = $('#website-url').val();
   "<article class='card'>"+
   "<h2 class='card-title'>"
   +siteTitle+
-  "</h2> <hr> <a href='" + siteUrl + "'class='card-url'>"
+  "</h2> <hr> <a href='" + siteUrl + "'class='card-url' target='_blank'>"
   +siteUrl+
   "</a> <hr>"+
   " <button class='read-button'>read</button>"+
@@ -30,7 +29,7 @@ var siteUrl = $('#website-url').val();
   "</article";
 
   total +=1
-  console.log(total)
+  tallyRead();
   
   
   
@@ -52,16 +51,29 @@ var siteUrl = $('#website-url').val();
   })
 
 function markRead() {
+     if ($(this).parent().hasClass('read')) {
+      read--;
+     } else read ++;
      $(this).parent().toggleClass("read");
-     read ++;
+     tallyRead();
 }
 
 function deleteCard() {
+  if ($(this).parent().hasClass('read')) {
+    read--;
+  }
   $(this).parent().remove();
-  total --;
+  total--;
+  tallyRead();
 }
 
 function displayError() {
   $('.error').removeAttr('hidden');
 }
 
+function tallyRead(){
+  
+  $('.total').text("Total: " + total);
+  $('.read-count').text("Read: " + read);
+  $('.unread').text("Unread: " + (total - read));
+}

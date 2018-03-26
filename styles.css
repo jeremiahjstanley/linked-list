@@ -50,12 +50,27 @@ img {
   text-align: center;
 }
 
+.read-button {
+  float: left;
+}
+
+.delete {
+  float: right;
+}
+
 .button:hover,
 .button:disabled {
   background-color: #FFD773;
 }
-.read {
-  background-color: #F2F4F4;
+.read .read-button{
+  color:#F05A28;
+  font-weight:800;
+}
+
+.read a, .read .delete {
+  border-bottom:1.5px solid #CFD8DC;
+  text-decoration
+
 }
 
 section {
@@ -64,20 +79,20 @@ section {
   float: right;
   flex-direction: column;
   height: 700px;
-  justify-content: center;
-  width: 50%
-
+  width: 50%;
+  overflow: scroll;
 }
 
 
-p {
+p, span{
   color: #FFFFFF;
   text-align: center;
-  margin: 3px auto 3px auto;
+  margin: 5px;
+  font-weight: 100;
 }
 
 article {
-  background-color: #FFFFFF;
+  background-color: #F2F4F4;
   border: 1px solid #455A64;
   margin: 15px auto 0 auto;
   padding: 5px 10px 5px 10px;
@@ -91,32 +106,27 @@ a, h2 {
 h2 {
   color: #455A64;
   font-weight: 800;
+  margin:2px;
 }
 
 a {
   color: #607D8B;
   font-weight: 400;
+  text-decoration: none;
+  
 }
 
 button {
   color: #455A64;
   background-color: transparent;
   border: 0;
+  font-size:14px;
 }
 
 hr {
+  border-style: solid;
   color: #CFD8DC;
 }
-
-
-.read-button {
-  float: left;
-}
-
-.delete {
-  float: right;
-}
-
 
 @media only screen and (max-width: 610px) {
   form, 
