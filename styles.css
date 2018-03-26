@@ -50,7 +50,8 @@ img {
   text-align: center;
 }
 
-.button:hover {
+.button:hover,
+.button:disabled {
   background-color: #FFD773;
 }
 .read {
@@ -74,6 +75,10 @@ article {
   margin: 0 auto 0 auto;
   padding: 5px 10px 5px 10px;
   width: 85%;
+}
+
+a, h2 {
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -101,4 +106,17 @@ hr {
 
 .delete {
   float: right;
+}
+
+@media only screen and (max-width: 610px) {
+  form, 
+  section{
+    float:none;
+    height:auto;
+    width:100%;
+    max-width: 610px;
+    margin:auto;
+    min-height:300px;
+  }
+
 }
