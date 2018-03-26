@@ -64,9 +64,11 @@ section {
   float: right;
   flex-direction: column;
   height: 700px;
+  justify-content: center;
   width: 50%
 
 }
+
 
 p {
   color: #FFFFFF;
@@ -80,6 +82,10 @@ article {
   margin: 15px auto 0 auto;
   padding: 5px 10px 5px 10px;
   width: 85%;
+}
+
+a, h2 {
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -102,11 +108,26 @@ hr {
   color: #CFD8DC;
 }
 
+
 .read-button {
   float: left;
 }
 
 .delete {
   float: right;
+}
+
+
+@media only screen and (max-width: 610px) {
+  form, 
+  section{
+    float:none;
+    height:auto;
+    width:100%;
+    max-width: 610px;
+    margin:auto;
+    min-height:300px;
+  }
+
 }
 

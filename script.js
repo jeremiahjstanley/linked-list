@@ -5,12 +5,18 @@ var unread = total - read;
 
 button.click(getInfo);
 
-function getInfo() {
-  var siteTitle = $('#site-title').val();
-  var siteUrl = $('#website-url').val();
 
-  errorMessage(siteTitle, siteUrl);
-  enableButton(siteTitle, siteUrl);
+function getInfo() {
+  event.preventDefault();
+ 
+var siteTitle = $('#site-title').val();
+var siteUrl = $('#website-url').val();
+
+  if(siteTitle === "" || siteUrl === "") {
+    displayError();
+    return;
+  }
+  $(".error").attr('hidden','true');
 
   var newCard = 
   "<article class='card'>"+
@@ -23,40 +29,39 @@ function getInfo() {
   " <button class='delete'>delete</button>"+
   "</article";
 
-  event.preventDefault();
-
-  $('section').prepend(newCard);
-  $('section :nth-child(1)').on('click','.read-button', markRead);
-  $('section :nth-child(1)').on('click','.delete', deleteCard);
-
   total +=1
   console.log(total)
-};
+  
+  
+  
+  document.querySelector("form").reset();
 
+  $('section').prepend(newCard);
 
-function errorMessage(siteTitle, siteUrl) {
-  if(siteTitle === "" || siteUrl === "") {
-    displayError();
-    return;
-  };
-};
+  $('section :nth-child(1)').on('click','.read-button', markRead)
+  $('section :nth-child(1)').on('click','.delete', deleteCard)
 
-function enableButton(siteTitle, siteUrl) {
-  if (siteTitle === "" || siteUrl === "") {
-    button.removeAttribute('disabled', true);
-  };
-};
+  button.attr('disabled','true');
+
+}
+
+ $('form').on('input', function() {
+    if($('#site-title').val() && $('#website-url').val()) {
+      button.removeAttr('disabled');
+    }else button.attr('disabled','true');
+  })
 
 function markRead() {
-  $(this).parent().toggleClass("read");
-  read +=1
-};
+     $(this).parent().toggleClass("read");
+     read ++;
+}
 
 function deleteCard() {
   $(this).parent().remove();
-  total -=1
-};
+  total --;
+}
 
 function displayError() {
-  $('.error').toggle('hidden');
-};
+  $('.error').removeAttr('hidden');
+}
+
