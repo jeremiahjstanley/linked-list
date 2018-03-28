@@ -73,7 +73,13 @@ img {
 .read a, .read .delete {
   border-bottom:1.5px solid #CFD8DC;
   text-decoration
+}
 
+.read-button:hover,
+.card-url:hover,
+.delete:hover  {
+  border-bottom: 1px solid #FFC107;
+  font-weight: 800;
 }
 
 section {
