@@ -26,7 +26,7 @@ h1 {
 
 form input{
   border: 0;
-  color: #BBBDBF;
+  color: #565656;
   display: block;
   font-size: 20px;
   font-weight: 300;
@@ -40,7 +40,8 @@ img {
   height: 35px;
 }
 
-.button {
+.button,
+.delete-read{
   background-color: #FFC107;
   border: 0;
   border-radius: 0;
@@ -59,7 +60,9 @@ img {
 }
 
 .button:hover,
-.button:disabled {
+.button:disabled,
+.delete-read:hover,
+.delete-read:disabled {
   background-color: #FFD773;
 }
 .read .read-button{
