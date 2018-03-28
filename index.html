@@ -12,14 +12,22 @@
       </label>
       <p class="error" hidden>Please enter a title and valid URL</p>
       <label for="website-url"> 
-        <input type="text" id="website-url" placeholder="  Website URL" label="Website URL">
+        <input type="url" id="website-url" placeholder="  Website URL" label="Website URL">
       </label>
       <input type="submit" value="Enter" class="button" disabled="true"></input>
+      <figure>
+        <span class="total"> Total: 0 </span> <span class="read-count"> Read: 0 </span> <span class="unread"> Unread: 0 </span>
+      </figure>
+      <input type="submit" value="Delete Read" class="delete-read" disabled="true"></input>
     </form>
   <section>
     <!-- User input here -->
   </section>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.min/jquery.min.js"><\/script>')</script>
+
 <script src="script.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
