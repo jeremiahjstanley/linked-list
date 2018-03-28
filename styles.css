@@ -32,6 +32,7 @@ form input{
   font-weight: 300;
   letter-spacing: 1px;
   margin: 17.5px auto 17.5px auto;
+  max-width: 400px;
   height: 35px;
   width: 90%
 }
@@ -104,6 +105,7 @@ article {
   background-color: #F2F4F4;
   border: 1px solid #455A64;
   margin: 15px auto 0 auto;
+  max-width: 500px;
   padding: 5px 10px 5px 10px;
   width: 85%;
 }
