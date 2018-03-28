@@ -12,7 +12,7 @@ form {
   float: left;
   flex-direction: column;
   justify-content: center;
-  height: 700px;
+  height: 800px;
   text-align: center;
   width: 50%;
 }
@@ -88,7 +88,7 @@ section {
   display: flex;
   float: right;
   flex-direction: column;
-  height: 700px;
+  height: 800px;
   width: 50%;
   overflow: scroll;
 }
@@ -103,7 +103,7 @@ p, span{
 
 article {
   background-color: #F2F4F4;
-  border: 1px solid #455A64;
+  border: 2px solid #455A64;
   margin: 15px auto 0 auto;
   max-width: 500px;
   padding: 5px 10px 5px 10px;

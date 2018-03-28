@@ -80,7 +80,7 @@ function tallyRead(){
 
 
  $('.delete-read').on('click',function(e){
-  e.preventDefault();
+    e.preventDefault();
     $('.read').remove();
     total = total - read;
     read = 0;
