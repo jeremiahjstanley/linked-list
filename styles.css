@@ -1,10 +1,9 @@
-html {
-  font-family: Open Sans, Sans-Serif;  
-}
-
 body {
+  font-family: Open Sans, Sans-Serif;  
   margin: 0;
 }
+
+/* main form styles*/
 
 form {
   background-color: #455A64;
@@ -41,47 +40,7 @@ img {
   height: 35px;
 }
 
-.button,
-.delete-read{
-  background-color: #FFC107;
-  border: 0;
-  border-radius: 0;
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 800; 
-  text-align: center;
-}
-
-.read-button {
-  float: left;
-}
-
-.delete {
-  float: right;
-}
-
-.button:hover,
-.button:disabled,
-.delete-read:hover,
-.delete-read:disabled {
-  background-color: #FFD773;
-}
-.read .read-button{
-  color:#F05A28;
-  font-weight:800;
-}
-
-.read a, .read .delete {
-  border-bottom:1.5px solid #CFD8DC;
-  text-decoration
-}
-
-.read-button:hover,
-.card-url:hover,
-.delete:hover  {
-  border-bottom: 1px solid #FFC107;
-  font-weight: 800;
-}
+/* new Card styles*/
 
 section {
   background-color: #CFD8DC;
@@ -93,8 +52,8 @@ section {
   overflow: scroll;
 }
 
-
-p, span{
+p, 
+span{
   color: #FFFFFF;
   text-align: center;
   margin: 5px;
@@ -102,7 +61,7 @@ p, span{
 }
 
 article {
-  background-color: #F2F4F4;
+  background-color: white;
   border: 2px solid #455A64;
   margin: 15px auto 0 auto;
   max-width: 500px;
@@ -110,7 +69,8 @@ article {
   width: 85%;
 }
 
-a, h2 {
+a, 
+h2 {
   overflow-wrap: break-word;
 }
 
@@ -124,7 +84,6 @@ a {
   color: #607D8B;
   font-weight: 400;
   text-decoration: none;
-  
 }
 
 button {
@@ -139,6 +98,55 @@ hr {
   color: #CFD8DC;
 }
 
+.button,
+.delete-read{
+  background-color: #FFC107;
+  border: 0;
+  border-radius: 0;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 800; 
+  text-align: center;
+}
+
+.button:hover,
+.button:disabled,
+.delete-read:hover,
+.delete-read:disabled {
+  background-color: #FFD773;
+}
+
+.delete {
+  float: right;
+}
+
+.read {
+  background-color:#F2F4F4;
+}
+
+.read a, .read .delete {
+  border-bottom:1.5px solid #CFD8DC;
+  text-decoration
+}
+
+.read-button {
+  float: left;
+}
+
+.read-button:hover,
+.card-url:hover,
+.delete:hover {
+  border-bottom: 1px solid #FFC107;
+  font-weight: 800;
+}
+
+.read .read-button{
+  color:#F05A28;
+  font-weight:800;
+}
+
+/*  media query for responsive behavior  */
+
 @media only screen and (max-width: 610px) {
   form, 
   section{
@@ -149,6 +157,5 @@ hr {
     margin:auto;
     min-height:300px;
   }
-
 }
 
