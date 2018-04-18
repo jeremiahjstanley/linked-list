@@ -4,7 +4,6 @@ var read = 0;
 
 button.click(getInfo);
 
-
 function getInfo() {
   var siteTitle = $('#site-title').val();
   var siteUrl = $('#website-url').val();
